@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
       - name: dotnet publish
-        run: dotnet publish -c Debug -o "./psetw"
+        run: dotnet publish -c Release -o "./psetw"
       - name: psgallery publish
         run: |
           $env:GITHUB_WORKSPACE
