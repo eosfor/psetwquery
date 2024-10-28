@@ -1,4 +1,4 @@
-name: psgraph-publish
+name: psetw-publish
 
 on:
   push:
