@@ -11,4 +11,10 @@
     <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.4.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="psetw.psd1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
