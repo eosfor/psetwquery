@@ -27,10 +27,10 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
       - name: dotnet publish
-        run: dotnet publish -c Release -o "./psetw"
+        run: dotnet publish -c Release -o "./psetwquery"
       - name: psgallery publish
         run: |
           $env:GITHUB_WORKSPACE
-          Publish-Module -Path "./psetw" -NuGetApiKey ${{ secrets.PS_GALLERY_SECRET }}
+          Publish-Module -Path "./psetwquery" -NuGetApiKey ${{ secrets.PS_GALLERY_SECRET }}
         shell: pwsh
         
