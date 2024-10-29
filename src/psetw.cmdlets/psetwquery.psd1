@@ -12,7 +12,7 @@
 RootModule = 'psetw.cmdlets.dll'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.2.0'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -72,7 +72,7 @@ Description = 'A module to extract data from etw/nettrace event files for furthe
 FunctionsToExport = @()
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-CmdletsToExport = @()
+CmdletsToExport = @('Get-EventPipeEvent')
 
 # Variables to export from this module
 VariablesToExport = '*'
