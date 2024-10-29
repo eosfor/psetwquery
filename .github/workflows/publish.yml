@@ -22,12 +22,22 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Install addititional tools
+        shell: pwsh
+        run: |
+          Install-Module -Name platyPS -Scope CurrentUser
+          Import-Module platyPS
       - name: Install dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release
       - name: dotnet publish
         run: dotnet publish -c Release -o "./psetwquery"
+      - name: build help files
+        run: |
+          Import-Module ./psetwquery -Force
+          New-ExternalHelp ./docs -OutputPath ./psetwquery/en-US/
+        shell: pwsh
       - name: psgallery publish
         run: |
           $env:GITHUB_WORKSPACE
