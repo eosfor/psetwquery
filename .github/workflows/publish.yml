@@ -25,7 +25,7 @@ jobs:
       - name: Install addititional tools
         shell: pwsh
         run: |
-          Install-Module -Name platyPS -Scope CurrentUser
+          Install-Module -Name platyPS -Scope CurrentUser -Force
           Import-Module platyPS
       - name: Install dependencies
         run: dotnet restore
